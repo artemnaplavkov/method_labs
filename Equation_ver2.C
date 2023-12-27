@@ -4,7 +4,7 @@
 
 int func(int sq,int code,double a,double b,double c,double* v1,double* v2){
         if(code==1){
-			sq=23;
+			sq=69;
 			return sq;
         }
         if(code==2){
@@ -81,7 +81,7 @@ int main(){
 	}
 	if(sq==0)
 		printf("Кол-во корней-%d\n",sq);
-	if(sq==23)
+	if(sq==69)
 		 printf("Кол-во корней-бесконечно\n");
 return 0;
 }
