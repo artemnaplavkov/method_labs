@@ -1,23 +1,24 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
+
 int func(int sq,int code,double a,double b,double c,double* v1,double* v2){
         if(code==1){
-                sq=23;
-		return sq;
+			sq=23;
+			return sq;
         }
         if(code==2){
-                sq=0;
-		return sq;
+			sq=0;
+			return sq;
         }
         if(code==3){
-		if(c==0){
+			if(c==0){
+				sq=1;
+				*v1=0;
+				return sq;
+				};
 			sq=1;
-			*v1=0;
-			return sq;
-			};
-                sq=1;
-                *v1=-c/b;
+			*v1=-c/b;
 		return sq;
         }
         sq=2;
@@ -41,19 +42,14 @@ int func(int sq,int code,double a,double b,double c,double* v1,double* v2){
 }
 int main(){
 	printf("Укажите коэффициенты для уравнения вида: ах^2+bх+с=0\n");
-	double x1;
-	double x2;
-	double a;
-	double b;
-	double c;
-	int code=0;
-	int sq;
+	double x1,x2, a, b, c,
+	int code=0, sq;
 	printf("a=");
 	scanf("%lf",&a);
 	printf("b=");
-        scanf("%lf",&b);
+    scanf("%lf",&b);
 	printf("c=");
-        scanf("%lf",&c);
+    scanf("%lf",&c);
 	if(a==0){
 		if(b==0){
 			if(c==0){
@@ -83,9 +79,8 @@ int main(){
 		printf("Кол-во корней-%d\n",sq);
                 printf("x=%f\n",x1);
 	}
-	if(sq==0){
+	if(sq==0)
 		printf("Кол-во корней-%d\n",sq);
-	}
 	if(sq==23)
 		 printf("Кол-во корней-бесконечно\n");
 return 0;
