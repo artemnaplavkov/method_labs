@@ -1,6 +1,6 @@
 #include <stdio.h>
 int rec(int n){
-	if(n>2){
+	if(n>=2){
 		return n*rec(n-1);
 	}
 	else
